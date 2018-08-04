@@ -37,25 +37,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <input type="submit" value="Put job to list" v-on:click.prevent="function here">
+                <input type="submit" value="Put job to list" v-on:click.prevent="addJob">
             </div>
         </div>
-    </div>
-
-    <hr>
-
-    <div class="container">
-        <div class="row">
-            <div class="card" v-for="item in items">
-                <div class="card-block">
-                    <h3> {{item.title}} </h3>
-                    <p> {{item.desc}} </p>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="card" v-for="item in items">
+                    <div class="card-block">
+                        <h3> {{item.title}} </h3>
+                        <p> {{item.desc}} </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
 
 
 
