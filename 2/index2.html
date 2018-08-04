@@ -62,7 +62,7 @@
             el: "#app",
             data: {
                 appTitle: "Task list app",
-                jobItem: "",
+                jobTitle: "",
                 jobDesc: "",
                 items: [
                     { title: "Job title text", desc: "Job desc text" },
@@ -73,7 +73,14 @@
             },
             methods: {
                 addJob: function () {
-
+                    if (this.jobTitle !== '' && this.jobDesc) {
+                        const item = {};
+                        item.title = this.jobTitle;
+                        item.desc = this.jobDesc;
+                        this.items.push(item);
+                        this.jobTitle = '';
+                        this.jobDesc = '';
+                    }
                 }
 
             }
