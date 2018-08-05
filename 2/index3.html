@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app">
+        <!-- lot of divs at here -->
+    </div>
     <script src="">
     </script>
     <script>
@@ -23,10 +26,19 @@
             },
             methods: {
                 addJob: function() {
-                    // function body here
+                if(this.jobTitle!=='' & this.jobDesc!=='' ){
+                    item = {};
+                    item.title = this.jobTitle;
+                    item.desc = this.jobDesc;
+                    items.push(item);
+                    this.jobTitle = '';
+                    this.jobDesc = '';
+                    }
                 }
             }
         })
     </script>
 </body>
 </html>
+
+items[{}]
